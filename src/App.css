@@ -1,0 +1,77 @@
+#root{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(98,90,224,1) 16%, rgba(252,70,107,1) 77%);
+  font-size: 5em;
+  font-family:'Work Sans', sans-serif;;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.work-sans{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+div{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.link{
+  color: #32397a;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+h1{
+  color: #32397a;
+  cursor: pointer;
+}
+
+h2{
+  color:#32397a;
+  cursor: pointer;
+}
+
+p{
+  color:#32397a;
+  font-size: 0.5em;
+  font-family: "Work Sans", sans-serif;
+}
+
+footer{
+  color: #32397a;  
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15px;
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+}
+
+.aboutme-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.aboutme-content.show {
+  max-height: 300px; 
+  opacity: 1;
+}
