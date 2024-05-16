@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faReact} from "@fortawesome/free-brands-svg-icons";
+import {faHtml5, faJava, faReact} from "@fortawesome/free-brands-svg-icons";
 
 function AboutMe() {
     const [showInfo, toggleShowInfo] = useState(false);
@@ -8,11 +8,20 @@ function AboutMe() {
     return (
         <section>
             <h1 className="aboutme" onClick={() => toggleShowInfo(!showInfo)}>
-                {showInfo ? "Hide Info" : "Show Info"}
+                {showInfo ? "Show less" : "Show more about me"}
             </h1>
             <div className={`aboutme-content ${showInfo ? 'show' : ''}`}>
-                <p>Hi! My name is Lucas, and I'm studying systems development.</p>
-                <p><FontAwesomeIcon icon={faReact}/></p>
+                <p>Hi! My name is Lucas, and I'm studying systems development.
+                    <br />
+                    <br />
+                    Currently learning:
+                    <br />
+                    <p className="icon">
+                        <FontAwesomeIcon className="animate__animated animate__pulse animate__infinite animate__fast" icon={faReact}/>
+                        <FontAwesomeIcon className="animate__animated animate__pulse animate__infinite animate__fast" icon={faJava}/>
+                        <FontAwesomeIcon className="animate__animated animate__pulse animate__infinite animate__fast" icon={faHtml5}/>
+                    </p>
+                </p> 
             </div>
         </section>
     );

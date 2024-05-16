@@ -46,7 +46,7 @@ h2{
 }
 
 p{
-  color:#32397a;
+  color:#000000;
   font-size: 0.5em;
   font-family: "Work Sans", sans-serif;
 }
@@ -72,6 +72,14 @@ footer{
 }
 
 .aboutme-content.show {
-  max-height: 300px; 
+  max-height: 400px; 
   opacity: 1;
+}
+
+
+.icon{
+  font-size: 85px;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
 }
