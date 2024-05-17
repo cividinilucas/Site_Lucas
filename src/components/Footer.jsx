@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-    return(
+    return (
         <footer>
             lucas@cividinilucas.digital
         </footer>
