@@ -83,3 +83,9 @@ footer{
   display: flex;
   justify-content: space-evenly;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 3em; /* Reduzindo o tamanho da fonte para telas menores */
+  }
+}
