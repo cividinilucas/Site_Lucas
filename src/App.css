@@ -6,12 +6,13 @@
 body {
   background: rgb(63, 94, 251);
   background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(98, 90, 224, 1) 16%, rgba(252, 70, 107, 1) 77%);
+  background-size: 400% 400%;
   font-size: 5em;
   font-family: 'Work Sans', sans-serif;
-  ;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  animation: animate 12s ease infinite;
 }
 
 .work-sans {
@@ -29,6 +30,7 @@ section{
   justify-content: center;
   flex-direction: column;
 }
+
 .about-me{
   height: unset;
   display: flex;
@@ -39,7 +41,6 @@ section{
   cursor: pointer;
   text-decoration: none;
 }
-
 
 h1 {
   color: #32397a;
@@ -78,22 +79,20 @@ footer {
   right: 0;
 }
 
-.about-me{
-  --animation: pulse;
-  
-}
-
 .aboutme-content {
   height: unset;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: max-height 1s ease, opacity 1s ease;
+  transition-duration: 0.8s;
 }
 
 .aboutme-content.showAboutMe {
   max-height: 800px;
   opacity: 1;
+  transition: 1s;
+  transition-duration: 1s;
 }
 
 .knowledge-content {
@@ -102,12 +101,14 @@ footer {
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition-duration: 0.8s;
 }
 
 .knowledge-content.showKnowledge {
-  max-height: 800px;
+  max-height: 500px;
   opacity: 1;
   width: 500px;
+  transition-duration: 1s;
   
 }
 
@@ -121,6 +122,17 @@ footer {
 @media screen and (max-width: 768px) {
   body {
     font-size: 3em;
-    /* Reduzindo o tamanho da fonte para telas menores */
+  }
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
   }
 }

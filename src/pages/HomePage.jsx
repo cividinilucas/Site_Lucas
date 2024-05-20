@@ -1,6 +1,7 @@
 import react from "react";
 import "animate.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 function HomePage() {
@@ -10,15 +11,23 @@ function HomePage() {
     }
 
     return (
-        <section>
-            <h1 className="animate__animated animate__pulse animate__infinite animate__fast">
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}>
+            <motion.h1
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
                 <Link className="link" to={"/aboutme"}> Lucas Cividini </Link>
-            </h1>
+            </motion.h1>
 
-            <h2 className="animate__animated animate__pulse animate__infinite animate__fast" onClick={redirectOnClick}>
+            <motion.h2
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={redirectOnClick}>
                 <Link className="link"> GitHub </Link>
-            </h2>
-        </section>
+            </motion.h2>
+        </motion.section>
     )
 }
 
